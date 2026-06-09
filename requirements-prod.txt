@@ -1,0 +1,9 @@
+scikit-learn
+pypdf
+pymupdf
+python-docx
+joblib
+requests
+fastapi
+uvicorn[standard]
+python-multipart

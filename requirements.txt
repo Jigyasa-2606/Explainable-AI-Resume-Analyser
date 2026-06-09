@@ -1,0 +1,12 @@
+streamlit
+scikit-learn
+pypdf
+pymupdf
+pdf2image
+pytesseract
+python-docx
+joblib
+requests
+fastapi
+uvicorn
+python-multipart

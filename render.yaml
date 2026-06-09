@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: resume-analyzer-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements-prod.txt
+    startCommand: uvicorn backend_api:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.0"
+      - key: FRONTEND_ORIGIN_REGEX
+        value: "^https://.*\\.vercel\\.app$"
+      - key: FRONTEND_ORIGINS
+        sync: false
+      - key: RAPIDAPI_KEY
+        sync: false
+      - key: ADZUNA_APP_ID
+        sync: false
+      - key: ADZUNA_APP_KEY
+        sync: false
+      - key: SERPAPI_KEY
+        sync: false
+      - key: JOOBLE_API_KEY
+        sync: false
+      - key: APIFY_API_TOKEN
+        sync: false
+      - key: APIFY_INTERNSHALA_ACTOR_ID
+        sync: false
