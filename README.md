@@ -8,11 +8,11 @@ Upload a resume. The app searches live jobs, ranks them against you with a train
 
 Home
 
-![Home](docs/screenshots/home.png)
+![Home](docs/screenshots/home.jpg)
 
 Upload a resume and set search preferences
 
-![Search](docs/screenshots/search.png)
+![Search](docs/screenshots/search.jpg)
 
 ## How to use
 
