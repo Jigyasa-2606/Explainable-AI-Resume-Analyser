@@ -31,6 +31,10 @@ The first search after a pause can take a minute. The API sleeps on the free Ren
 - Ranks them with a trained Random Forest and explains skills, ATS, and fit
 - If one job board fails, results from the others still appear
 
+## How ranking works
+Each resume–job pair is turned into features (skill overlap, related skills, ATS signals, section quality, text similarity). A **Random Forest** trained on ~10k labeled pairs predicts the match score. The UI shows those features back as the explanation, not a black-box number.
+Ranking quality was measured with **NDCG@5**. A second-stage SBERT reranker was tried and left **off** — on this labeled set, RF already ranked better, so live scoring stays RF-only.
+
 ## Tech stack
 
 | Layer | Tech |
